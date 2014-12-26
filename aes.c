@@ -72,7 +72,7 @@ int main(int argc, char **argv)
     balboa_core *aes;
     int c;
     struct aes_core *p;
-    const char *o_port = "";
+    const char *o_port;
     unsigned char buf[16], result[16];
     int buflen = 16;
     int i;
