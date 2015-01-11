@@ -98,6 +98,10 @@ int main(int argc, char **argv)
     }
 
     p = balboa_core_get_win(aes, 0);
+
+    if (!p) {
+        die("balboa_core_get_win(aes) failed: %s\n", balboa_last_error(b));
+    }
     
     unhex(buf, "10a58869d74be5a374cf867cfb473859");
     b_memcpy(p->key, buf, buflen);
